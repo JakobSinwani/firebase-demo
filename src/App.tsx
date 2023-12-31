@@ -16,6 +16,7 @@ import WelcomeImage from "./assets/bg_image.png";
 import { ChangeEvent, useState } from "react";
 import { useRecoilValue } from "recoil";
 import { isLoggedInState } from "./store/auth";
+import { logout, signInWithGoogle } from "./services/authentication";
 function App() {
   return (
     <Box
@@ -65,11 +66,11 @@ const AuthSection = () => {
   return (
     <Box display="flex" justifyContent="center">
       {isLoggedIn ? (
-        <Button variant="contained" color="primary">
+        <Button onClick={logout} variant="contained" color="primary">
           Log out
         </Button>
       ) : (
-        <Button variant="contained" color="primary">
+        <Button onClick={signInWithGoogle} variant="contained" color="primary">
           Log In to Start Your Journey
         </Button>
       )}
