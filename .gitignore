@@ -10,7 +10,7 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+*.localgit branch -M main
 
 # Editor directories and files
 .vscode/*
